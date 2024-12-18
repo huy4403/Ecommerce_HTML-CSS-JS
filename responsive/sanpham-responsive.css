@@ -1,0 +1,121 @@
+/* mobile width < 740*/
+/* Tablet width >= 740 and width < 1024*/
+/* Pc width > 1024 */
+/* Nếu max-with bằng 739 thì khi nhỏ hơn hoặc bằng 739 thì sẽ áp dụng thằng media này */
+@media screen and (max-width: 744px) 
+{
+    .menu-nav{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: transform 0.5s ease; /* Tạo hiệu ứng */
+        transform: translateX(-100%); /* Đưa mục về bên trái hơn 100% */
+        position: relative;
+    }
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu-nav{
+        max-height: 100%;
+        transform: translateX(0);
+    }
+
+    .container-event{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .event{
+        width: 350px;
+    }
+    .about-us-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .menu .content .box{
+        width: 300px;
+    }
+    .buyitem{
+        margin-left: 65px;
+        width: 150px;
+    }
+    .about-us-container .about-us{
+        width: 100%;
+    }
+    .banner{
+        min-height: 24vh;
+    }
+    .event img{
+        width: 100%;
+    }
+    .about-us-img img{
+        width: 100%;
+    }
+    .lookbook p{
+        width: 95%;
+    }
+    footer{
+        height: 744px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .hidden-clothes{
+        display: none;
+        position: absolute;
+        z-index: 999999999;
+        top: 10px;
+        right: 0px;
+    }
+}
+@media screen and (min-width: 744px) and (max-width: 1024px) 
+{
+    .container-event{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about-us-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .about-us-container .about-us{
+        width: 100%;
+    }
+    .banner{
+        min-height: 38vh;
+    }
+    .menu .content .box{
+        width: 350px;
+    }
+    .buyitem{
+        margin-left: 95px;
+        width: 150px;
+    }
+    .lookbook p{
+        width: 95%;
+    }
+    footer{
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 50px;
+    }
+    .logo2 img{
+        width: 150px;
+        user-select: none;
+    }   
+}

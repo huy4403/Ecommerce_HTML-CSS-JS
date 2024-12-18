@@ -1,0 +1,117 @@
+/* mobile width < 740*/
+/* Tablet width >= 740 and width < 1024*/
+/* Pc width > 1024 */
+/* Nếu max-with bằng 739 thì khi nhỏ hơn hoặc bằng 739 thì sẽ áp dụng thằng media này */
+@media screen and (max-width: 744px) 
+{
+    /* header */
+    .menu-nav{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: transform 0.5s ease; /* Tạo hiệu ứng */
+        transform: translateX(-100%); /* Đưa mục về bên trái hơn 100% */
+        position: relative;
+    }
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu-nav{
+        max-height: 100%;
+        transform: translateX(0);
+    }
+    /* main */
+    .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+    .image .img-main{
+        display: flex;
+        justify-content: center;
+    }
+    .image .img-main img{
+        width: 80%;
+    }
+    .image .img-extra{
+        display: flex;
+        justify-content: center;
+    }
+    .image .img-extra img{
+        width: 20%;
+    }
+    .info{
+        max-width: 80%;
+        gap: 20px;
+    }
+    .container .info h1{
+        margin-top: 60px;
+        font-size: 26px;
+    }
+    .ul-li button{
+        margin: 5px;
+        font-size: 13px;
+    }
+    .ul-li p{
+        font-size: 17px;
+    }
+    .ul-li input[type="text"]{
+        font-size: 12px;
+    }
+    .ul-li span{
+        font-size: 17px;
+    }
+    .ul-li label{
+        font-size: 17px;
+    }
+    .confirmation {
+        top: 40%;
+        width: 300px;
+    }
+    .confirmation button{
+        margin-left: 140px;
+    }
+    .confirmation .bank-details img {
+        max-width: 100%;
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+    .show-size-chart img{
+        width: 400px;
+    }
+    .img-size-chart i{
+        top: 55px;
+        right: 8px;
+    }
+    /* footer */
+    footer{
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 150px;
+    }
+    /* hidden */
+    .hidden-clothes{
+        display: none;
+        position: fixed;
+        z-index: 999999999;
+        top: 0px;
+        left: 0px;
+    }
+    .hidden-account{
+        display: none;
+        position: fixed;
+        z-index: 999999999;
+        top: 90px;
+        left: 15px;
+    }
+}

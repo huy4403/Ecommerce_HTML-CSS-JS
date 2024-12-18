@@ -1,0 +1,13 @@
+@media screen and (max-width: 744px) {
+    footer{
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 150px;
+    }
+    #form-login{
+        max-width: 300px;
+    }
+}

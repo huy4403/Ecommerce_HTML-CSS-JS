@@ -1,0 +1,60 @@
+/* mobile width < 740*/
+/* Tablet width >= 740 and width < 1024*/
+/* Pc width > 1024 */
+/* Nếu max-with bằng 739 thì khi nhỏ hơn hoặc bằng 739 thì sẽ áp dụng thằng media này */
+@media screen and (max-width: 744px) 
+{
+    .menu-nav{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: transform 0.5s ease; /* Tạo hiệu ứng */
+        transform: translateX(-100%); /* Đưa mục về bên trái hơn 100% */
+        position: relative;
+    }
+    .navigation{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header label{
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu-nav{
+        max-height: 100%;
+        transform: translateX(0);
+    }
+    .container{
+        flex-direction: column;
+    }
+    .img-aboutus img{
+        width: 100%;
+    }
+    .noidung{
+        width: 100%;
+    }
+    footer{
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 200px;
+    }
+    .hidden-clothes{
+        display: none;
+        position: fixed;
+        z-index: 999999999;
+        top: 0px;
+        left: 0px;
+    }
+    .hidden-account{
+        display: none;
+        position: fixed;
+        z-index: 999999999;
+        top: 90px;
+        left: 15px;
+    }
+}

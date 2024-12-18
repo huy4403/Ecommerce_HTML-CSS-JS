@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:ital,wght@0,400;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    .search{
+        color: #111;
+        cursor: pointer;
+    }
+    .search-content{
+        color: #111;
+        text-align: center;
+    }
+}
+.copyright, .icon ul h3, i, .address h3, footer .icon ul li, .address a, .address, .left ul li:hover a, header .navigation li a, header .logo{
+    color: #fff;
+}
+/*  */
+header{
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 100px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    .search-form{
+        margin-right: -200px;
+    }
+}
+header.hidden {
+    transform: translateY(-100%);
+}
+header .logo{
+    font-weight: 700;
+    font-size: 2em;
+}
+header .logo span{
+    color: #ff0157;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+header .navigation li{
+    list-style: none;
+}
+header .navigation li a{
+    font-weight: 300;
+}
+header .navigation li a:hover{
+    border-bottom: 2px solid #fff;
+}
+#toggler, header label{
+    display: none;
+}
+/*  */
+.dropbtn:hover .hidden-clothes{
+    display: block;
+}
+.hidden-clothes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-clothes::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-clothes{
+    display: none;
+    width: 120px;
+    height: 220px;
+    position: fixed;
+    z-index: 999;
+    top: 80px;
+    right: 250px;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+}
+.hidden-clothes li{
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hidden-clothes ul li:hover{
+    background: rgba(143, 141, 141, 0.1);
+}
+/*  */
+.dropbtn:hover .hidden-account{
+    display: block;
+}
+.hidden-account::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-account::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-account{
+    display: none;
+    width: 130px;
+    /* height: 160px; */
+    height: max-content; /* Set the width to expand based on content */
+    min-height: 130px; /* Set a minimum width */
+    position: fixed;
+    z-index: 999;
+    top: 80px;
+    right: 40px;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+}
+.hidden-account li{
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hidden-account ul li:hover{
+    background: rgba(143, 141, 141, 0.1);
+}
+.product{
+    border: none;
+    outline: none;
+    color: black;
+    padding-left: 10px;
+    border-radius: 10px;
+    display: none;
+}
+li button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+/*  */
+.container{
+    display: flex;
+    margin-left: 20px;
+    margin-top: -50px;
+    justify-content: center;
+    padding: 150px 50px;
+    gap: 20px;
+}
+/* Tab thông tin cá nhân */
+
+.tab-content{
+    width: 100%;
+    min-height: 650px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tab-pane {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text within .tab-pane */
+    padding: 150px 50px;
+    gap: 20px;
+}
+
+.tab-pane h1 {
+    text-transform: uppercase;
+    margin-top: -130px;
+    margin-bottom: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+/* cart  */
+.cart-item{
+    margin: 20px;
+    overflow-x: auto;
+}
+.cart-item table {
+    border-radius: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: left;
+}
+/* Make the header row sticky */
+.cart-item th {
+    position: sticky;
+    top: 0;
+    background-color: #ccc;
+}
+
+.sp-gia, .total-money {
+    text-align: center;
+    font-weight: bold;
+}
+.sp-name{
+    text-align: center;
+    word-wrap: break-word; 
+}
+.ma-sp{
+    text-align: center;
+}
+.sp-img img{
+    height: 80px;
+    width: 80px;
+}
+.check-cart{
+    text-align: center;
+}
+.sp-num, .sp-img, .sp-soluong, .product-delete {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.sp-color{
+    text-align: center;
+}
+.size-sp{
+    text-align: center;
+}
+#row-total{
+    height: 50px;
+    background-color: #ccc;
+    font-weight: bold;
+    text-align: center;
+}
+#row-total .total-money{
+    color: red;
+}
+#row-total .sp-num,.sp-name, .ma-sp, .sp-gia, .sp-num, .sp-img, .sp-soluong, .product-delete{
+    height: 0%;
+}
+.product-delete button{
+    background-color: #fff;
+    border: 0px;
+}
+.product-delete button:hover{
+    background-color: #ccc;
+    font-weight: bold;
+    border: 0px;
+}
+/* Tab gio hang */
+.btn-thanhtoan,
+.btn-cart-item{
+    margin-left: 15px;
+    padding: 10px 25px;
+    border: 1px solid #212121;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.btn-thanhtoan {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn-thanhtoan:hover,
+.btn-cart-item:hover{
+    background-color: #212121;
+    color: #fff;
+    cursor: pointer;
+}
+#tinhtoan {
+    position: absolute;
+    bottom: 75px;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 17px;
+    font-weight: bold;
+}
+/* Tab Voucher */
+/*  */
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 170px;
+    position: relative;
+}
+.logo2 img{
+    width: 200px;
+    user-select: none;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.address a{
+    padding-top: 5px;
+}
+.address h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin: 0 0 20 0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+}
+footer .icon ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon ul li{
+    display: flex;
+    list-style: none;
+}
+.icon ul h3{
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 14px;
+}
+/*  */
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    font-family: 'Calibri';
+}
+.inbox{
+    width: 60px;
+    position: fixed;
+    border-radius: 99%;
+    bottom: 40px;
+    right: 20px;
+    z-index: 999;
+    transition: transform 0.3s ease-out;
+}
+.inbox:hover{
+   transform: scale(1.2);
+}
+#scrollToTopButton {
+    display: none; /* Ẩn nút ban đầu */
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    z-index: 99;
+    background-color: #575656;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#scrollToTopButton:hover {
+    background-color: skyblue;
+}
+
+.confirmation {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    min-width: 400px;
+    min-height: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    margin-top: 50px;
+  }
+  .confirmation label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .confirmation select {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .confirmation .bank-details,
+  .confirmation .momo-details {
+    display: none;
+    margin-top: 10px;
+  }
+  .confirmation .bank-details img {
+    display: block;
+    margin: auto;
+  }
+  .confirmation button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #474646;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 240px;
+    transition: background-color 0.3s ease;
+  }
+  .confirmation button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  .confirmation i {
+    position: absolute;
+    top: 13px;
+    right: -1px;
+  }
+.non-cart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sp-gia, .total-money {
+    text-align: center;
+    font-weight: bold;
+}
+.sp-name{
+    text-align: center;
+    word-wrap: break-word; 
+}
+.ma-sp{
+    text-align: center;
+}
+.sp-img img{
+    height: 80px;
+    width: 80px;
+}
+.sp-num, .sp-img, .sp-soluong, .product-delete {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.sp-color{
+    text-align: center;
+}
+.size-sp{
+    text-align: center;
+}
+#row-total{
+    height: 50px;
+    background-color: #ccc;
+    font-weight: bold;
+    text-align: center;
+}
+#row-total .total-money{
+    color: red;
+}
+#row-total .sp-num,.sp-name, .ma-sp, .sp-gia, .sp-num, .sp-img, .sp-soluong{
+    height: 0%;
+}

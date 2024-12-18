@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    color: #fff;
+    .search{
+        color: #111;
+        cursor: pointer;
+    }
+    .search-content{
+        color: #111;
+        text-align: center;
+    }
+    .search-form{
+        margin-right: -200px;
+    }
+}
+/*  */
+header{
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px 100px;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+header.hidden {
+    transform: translateY(-100%);
+  }
+
+header .logo{
+    font-weight: 700;
+    font-size: 2em;
+}
+header .logo span{
+    color: #ff0157;
+}
+header .navigation{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+header .navigation li{
+    list-style: none;
+}
+header .navigation li a{
+    font-weight: 300;
+}
+header .navigation li a:hover{
+    border-bottom: 2px solid #fff;
+}
+#toggler, header label{
+    display: none;
+}
+/*  */
+.dropbtn:hover .hidden-clothes{
+    display: block;
+}
+.hidden-clothes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-clothes::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-clothes{
+    display: none;
+    width: 120px;
+    height: max-content;
+    min-height: 100px;
+    position: fixed;
+    z-index: 999;
+    top: 80px;
+    right: 250px;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+}
+.hidden-clothes li{
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hidden-clothes ul li:hover{
+    background: rgba(143, 141, 141, 0.1);
+}
+/*  */
+.dropbtn:hover .hidden-account{
+    display: block;
+}
+.hidden-account::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-account::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 10px solid transparent;
+    transform: translateY(-100%);
+}
+.hidden-account{
+    display: none;
+    width: 130px;
+    /* height: 160px; */
+    height: max-content; /* Set the width to expand based on content */
+    min-height: 130px; /* Set a minimum width */
+    position: fixed;
+    z-index: 999;
+    top: 80px;
+    right: 40px;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
+}
+.hidden-account li{
+    list-style: none;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hidden-account ul li:hover{
+    background: rgba(143, 141, 141, 0.1);
+}
+.product{
+    border: none;
+    outline: none;
+    color: black;
+    padding-left: 10px;
+    border-radius: 10px;
+    display: none;
+}
+li button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+/*  */
+.banner{
+    width: 100%;
+    min-height: 50px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+}
+/*  */
+.title h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+/*  */
+.menu .content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.menu .content .box{
+    width: 400px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+.menu .content .box .imgBx1 h3{
+    padding: 15px 0 5px;
+    font-weight: 400;
+    color: #111;
+    text-align: center;
+}
+.menu .content .box .imgBx1 img{
+    width: 100%;
+}
+.menu .content .box .buyitem a h3{
+    padding: 10px 10px;
+    font-weight: 400;
+    background-color: #575656;
+    border-radius: 10px;
+    text-align: center;
+}
+.menu .content .box .buyitem a h3:hover{
+    background-color: #474646;
+}
+.buyitem{
+    margin-left: 100px;
+    width: 200px;
+}
+/*  */
+.menu .hidden-items{
+    display: none;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.menu .hidden-items .box{
+    width: 400px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+.menu .hidden-items .box .imgBx1 h3{
+    padding: 15px 0 5px;
+    font-weight: 400;
+    color: #111;
+    text-align: center;
+}
+.menu .hidden-items .box .imgBx1 img{
+    width: 100%;
+}
+.menu .hidden-items .box .buyitem a h3{
+    padding: 10px 10px;
+    font-weight: 400;
+    background-color: #575656;
+    border-radius: 10px;
+    text-align: center;
+}
+.menu .hidden-items .box .buyitem a h3:hover{
+    background-color: #474646;
+}
+/*  */
+.btn-viewmore{
+    display: flex;
+    justify-content: center;
+}
+.viewmore{
+    background: #ff0157;
+    margin-bottom: 50px;
+    padding: 15px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;  
+    cursor: pointer;
+}
+.viewmore:hover{
+    background: #d31c59;
+}
+/*  */
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 170px;
+    position: relative;
+}
+.logo2 img{
+    width: 200px;
+    user-select: none;
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.address a{
+    padding-top: 5px;
+}
+.address h3{
+    font-weight: 700;
+    font-size: 21px;
+    text-transform: uppercase;
+    margin: 0 0 20 0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+}
+footer .icon ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon ul li{
+    display: flex;
+    list-style: none;
+}
+.icon ul h3{
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    font-family: 'Calibri';
+}
+.inbox{
+    width: 60px;
+    position: fixed;
+    border-radius: 99%;
+    bottom: 40px;
+    right: 20px;
+    z-index: 999;
+    transition: transform 0.3s ease-out;
+}
+.inbox:hover{
+   transform: scale(1.2);
+}
+
+#scrollToTopButton {
+    display: none; /* Ẩn nút ban đầu */
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    z-index: 99;
+    background-color: #575656;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#scrollToTopButton:hover {
+    background-color: skyblue;
+}
+.not-item{
+    height: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.not-item p{
+    color: #212121;
+}
+.section {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.section h2 {
+    color: #333;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.section p {
+    text-align: left;
+    margin-left: 20px;
+}
+.menu .sort-content{
+    color: #111;
+}
+.menu .sort label{
+    color: #111;
+}
+.menu .sort optgroup {
+    color: #111;
+}
+.menu .sort option {
+    color: #111;
+}
+.menu .sort{
+    margin-left: 85%;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination a {
+    padding: 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #575656;
+    color: white;
+}
